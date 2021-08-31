@@ -8,8 +8,8 @@ export const Content = styled.div`
 
     img {
         width: 100%;
-    height: 100%;
-    object-fit: cover;
+        height: 100%;
+        object-fit: cover;
     }
 
 `

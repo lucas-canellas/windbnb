@@ -7,7 +7,7 @@ export default function Footer() {
         <p>
           created by{" "}
           <strong>
-            <u>lucascanellas</u>
+            <u><a href="https://github.com/lucas-canellas">lucas-canellas</a></u>
           </strong>{" "}
           - devChallenges.io
         </p>

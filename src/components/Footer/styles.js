@@ -5,8 +5,9 @@ padding: 2rem;
 display: flex;
 justify-content: center;
 
-p {
+p, a {
     color: #828282;
 
 }
+
 `;
