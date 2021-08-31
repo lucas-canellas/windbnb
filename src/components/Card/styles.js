@@ -1,8 +1,18 @@
 import styled from "styled-components";
 
 export const Content = styled.div`
+
+  .content-image {
+    width: 100%;
+  height: 269px;
+  overflow: hidden;
+  border-radius: 24px;
+  background-color: #e4e4e4;
+  }
   img {
-    border-radius: 1.5rem;
+    width: 100%;
+  height: 100%;
+  object-fit: cover;
   }
 
   .card-info {
