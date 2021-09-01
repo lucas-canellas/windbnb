@@ -9,6 +9,12 @@ export const Content = styled.div`
   box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.1);
   border-radius: 16px;
 
+  textarea:focus, input:focus, select:focus {
+    box-shadow: 0 0 0 0;
+    border: 0 none;
+    outline: 0
+}
+
   .city,
   .guest,
   .button {
@@ -37,11 +43,7 @@ export const Content = styled.div`
     margin-bottom: .3rem;
 
   }
-
-  #location-name, #guest-name {
-
-  }
-
+  
   .button {
     display: flex;
     justify-content: center;
