@@ -1,34 +1,38 @@
-import { Button, Drawer } from "@material-ui/core";
-import { useState } from "react";
+import { Drawer } from "@material-ui/core";
+import { Container } from "../../globalStyles";
+import { Content } from "./styles";
+import SearchIcon from "@material-ui/icons/Search";
+import CloseIcon from '@material-ui/icons/Close';
 
+export default function MenuDrawer({ state, toggleDrawer }) {
 
-export default function MenuDrawer({props}) {
-
-    const [state, setState] = useState(false);
-
-    const toggleDrawer = (open) => (event) => {
-        setState(open)
-    }
-
-
-    const list = () => (
-        <div onClick={toggleDrawer(false)}>
-            <p>asdasasdasdasdas</p>
+  return (
+    <>
+      <Drawer anchor={"top"} open={state} onCLose={toggleDrawer(false)}>
+        <div>
+          <Container>
+            <div onClick={toggleDrawer(false)} id="close-modal"><CloseIcon/></div>
+            <Content>
+              <button className="city">
+                <p id="location">Location</p>
+                <p id="location-name">Helsink, Filand</p>
+              </button>
+              <button className="guest">
+                <p id="guests">Guests</p>
+                <p id="guest-name">Helsink, Filand</p>
+              </button>
+              <div className="button">
+                <button>
+                  <div>
+                    <SearchIcon />
+                  </div>
+                  <div>Search</div>
+                </button>
+              </div>
+            </Content>
+          </Container>
         </div>
-
-
-    )
-
-    return (
-        <>
-            <Button onClick={toggleDrawer(true)}>Abrir topo</Button>
-            <Drawer
-                anchor={'top'}
-                open={state}
-                onCLose={toggleDrawer(false)}
-            >
-                {list()}
-            </Drawer>
-        </>
-    )
+      </Drawer>
+    </>
+  );
 }
