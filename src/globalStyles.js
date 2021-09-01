@@ -15,4 +15,13 @@ export const Container = styled.div`
   max-width: 1440px;
   margin: 0 auto;
   padding: 0 2rem;
+
+  .close-drawer {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
 `;
+
+

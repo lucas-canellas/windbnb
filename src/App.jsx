@@ -12,7 +12,7 @@ function App() {
   const [state, setState] = useState(false);
 
   const toggleDrawer = (open) => (event) => {
-      setState(open)
+    setState(open)
   }
 
   return (
@@ -21,11 +21,11 @@ function App() {
       <div class="wrapper">
         <header>
           <Navbar toggleDrawer={toggleDrawer} />
-          <MenuDrawer state={state} toggleDrawer={toggleDrawer}/>
-          <TitleBar/>
+          <MenuDrawer state={state} toggleDrawer={toggleDrawer} />
+          <TitleBar />
         </header>
         <main>
-          <Cards />          
+          <Cards />
         </main>
         <footer>
           <Footer />

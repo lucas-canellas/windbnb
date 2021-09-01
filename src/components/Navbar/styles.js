@@ -32,4 +32,10 @@ export const Content = styled.div`
   align-items: center;
   justify-content: space-between;
   padding: 2rem 0;
+
+  @media (max-width: 575.98px) {
+    flex-direction: column;
+    gap: 2rem;
+  
+  }
 `;

@@ -1,26 +1,29 @@
 import React from "react";
 import { Container } from "../../globalStyles";
 import Card from "./../Card";
-import data from '../../assets/stays.json';
-
-
 import { Content } from "./styles";
-import { useEffect } from "react";
-
-
-
+import { useEffect, useState } from "react";
+import data from 'axios';   
 
 
 export default function Cards() {
 
-  useEffect(()=> console.log(data),[])
+  const [cards, setCards] = useState([]);
 
+  useEffect(() => {
+    data.get('./stays.json').then(response => {
+      setCards(response.data)
+    })     
+    
+  },[])
+
+  
   return (
     <Container>
       <Content>
-        {data.map(card => (
+        {cards.map(card => (
 					<Card data={card}/> 
-				))}               
+				))}                       
       </Content>
     </Container>
   );

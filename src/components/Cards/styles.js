@@ -12,4 +12,12 @@ export const Content = styled.div`
         object-fit: cover;
     }
 
+    @media (max-width: 1199.98px) {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    @media (max-width: 575.98px) {
+        grid-template-columns: 1fr;
+     }
+
 `
