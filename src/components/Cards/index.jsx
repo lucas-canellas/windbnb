@@ -4,18 +4,16 @@ import Card from "./../Card";
 import { Content } from "./styles";
 
 export default function Cards({ cards, sumCouter, city }) {
-  console.log(sumCouter);
-  console.log(city);
   return (
     <Container>
       <Content>
         {cards.map((card) =>
           city ? (
             card.city === city && sumCouter <= card.maxGuests ? (
-              <Card data={card} />
+              <Card key={card.title} data={card} />
             ) : null
           ) : (
-            <Card data={card} />
+            <Card key={card.title} data={card} />
           )
         )}
       </Content>

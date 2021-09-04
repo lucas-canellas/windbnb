@@ -30,7 +30,7 @@ function App() {
   return (
     <>
       <GlobalStyle />
-      <div class="wrapper">
+      <div className="wrapper">
         <header>
           <Navbar toggleDrawer={toggleDrawer} />
           <TitleBar />
