@@ -9,9 +9,8 @@ import MenuDrawer from "./components/MenuDrawer";
 import data from "axios";
 
 function App() {
+  const [city, setCity] = useState(null);
 
-  const [city, setCity] = useState(null)
-  
   const [state, setState] = useState(false);
   const [cards, setCards] = useState([]);
 
@@ -22,7 +21,6 @@ function App() {
     data.get("./stays.json").then((response) => {
       setCards(response.data);
     });
-    
   }, []);
 
   const toggleDrawer = (open) => (event) => {
@@ -35,6 +33,7 @@ function App() {
       <div class="wrapper">
         <header>
           <Navbar toggleDrawer={toggleDrawer} />
+          <TitleBar />
           <MenuDrawer
             state={state}
             toggleDrawer={toggleDrawer}
@@ -45,9 +44,7 @@ function App() {
             setSumCounter={setSumCounter}
             city={city}
             setCity={setCity}
-
           />
-          <TitleBar />
         </header>
         <main>
           <Cards cards={cards} city={city} sumCouter={sumCouter} />
