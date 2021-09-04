@@ -72,5 +72,5 @@ $ npm start
 
 ## Contact
 
-- GitHub [@lucas-canellas](https://{github.com/lucas-canellas})
+- GitHub [@lucas-canellas](https://github.com/lucas-canellas)
 
