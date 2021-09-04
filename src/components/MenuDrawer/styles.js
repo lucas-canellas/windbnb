@@ -4,6 +4,13 @@ export const Content = styled.div`
   display: flex;
   padding: 4rem 0;
 
+  
+
+  @media (max-width: 767.98px) {
+    flex-direction: column;
+  }
+  
+
   .teste {
     flex: 1;
   }
