@@ -1,67 +1,84 @@
 import styled from "styled-components";
 
-
 export const Content = styled.div`
-  margin: 5.8rem 0;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  background: #ffffff;
-  box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.1);
-  border-radius: 16px;
+  display: flex;
+  padding: 4rem 0;
 
-  textarea:focus, input:focus, select:focus {
-    box-shadow: 0 0 0 0;
-    border: 0 none;
-    outline: 0
-}
-
-  .city,
-  .guest,
-  .button {
-    background-color: #fff;
-    height: 55px;
+  .teste {
+    flex: 1;
   }
 
-  .city,
-  .guest {
-    display: flex;
-    padding: 0.5rem 1.5rem;
-    flex-direction: column;
-    justify-content: left;
-    align-items: flex-start;
-    border-radius: 16px;
+  .button-search-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
   }
 
-  #location,
-  #guests {
-    font-style: normal;
-    font-weight: 800;
-    font-size: 9px;
-    line-height: 11px;
-    text-transform: uppercase;
-    color: #333333;
-    margin-bottom: .3rem;
-
-  }
-  
-  .button {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  .button button {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 127px;
-    height: 55px;
-    background: #eb5757;
+  .location {
     box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.1);
     border-radius: 16px;
-    color: #fff;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 14px;
-    line-height: 18px;
+    height: 55px;
+    margin-bottom: 2rem;
+
+    .label-location {
+      padding-top: 0.5rem;
+      padding-left: 1.2rem;
+      font-style: normal;
+      font-weight: 800;
+      font-size: 9px;
+      line-height: 11px;
+      text-transform: uppercase;
+    }
+
+    .location-selected {
+      padding-top: 0.4rem;
+      padding-left: 1.2rem;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 14px;
+      line-height: 18px;
+    }
+
+    .button-search {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 126px;
+      height: 48px;
+      background: rgba(235, 87, 87, 0.9);
+      box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.1);
+      border-radius: 16px;
+      color: #FFF;
+    }
+  }
+
+  .counter-container {
+    margin: 1.5rem;
+    .peoples {
+      font-style: normal;
+      font-weight: bold;
+      font-size: 14px;
+      line-height: 18px;
+    }
+
+    .title {
+      font-style: normal;
+      font-size: 14px;
+      line-height: 18px;
+      margin-bottom: 0.5rem;
+    }
+
+    .counter {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+  }
+
+  .cities {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
   }
 `;

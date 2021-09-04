@@ -14,7 +14,8 @@ export const GlobalStyle = createGlobalStyle`
 export const Container = styled.div`
   max-width: 1440px;
   margin: 0 auto;
-  padding: 0 2rem;
+  padding: 0 1rem;
+  
 
   .close-drawer {
     margin-top: 2rem;
